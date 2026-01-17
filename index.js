@@ -6,8 +6,13 @@
  * @returns {boolean} whether the wizard can cast the spell
  */
 function canCastSpell(isSpellPrepared, hasScroll) {
-  // TODO
+  if (isSpellPrepared || hasScroll) {
+    return Boolean(true)}
+  else {
+    return Boolean(false);
+  }
 }
+
 
 /**
  * A creature is hidden from an observer if it is actively hiding
