@@ -31,11 +31,8 @@ function isHidden(hiding, aware) {
   } else if (hiding === true && aware === false) {
     return Boolean(true);
   // not hidden if unhidden, aware nor hidden but aware FT TT
-  } else {
-    return Boolean(false);
   }
 }
-
 
 /**
  * A strike hits if the attack value is greater than or equal
@@ -45,7 +42,9 @@ function isHidden(hiding, aware) {
  * @returns {boolean} whether the strike hits
  */
 function doesStrikeHit(attack, ac) {
-  // TODO
+  if (attack >= ac) {
+    return Boolean(true);
+  }
 }
 
 /**
