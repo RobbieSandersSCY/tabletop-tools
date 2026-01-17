@@ -69,7 +69,11 @@ function doesStrikeCrit(attack, ac) {
  * @returns {number} total hit points after healing
  */
 function heal(maxHp, currentHp, healAmount) {
-  // TODO
+  if (maxHp <= currentHp + healAmount) {
+    return maxHp;
+  } else {
+    return currentHp + healAmount;
+  }
 }
 
 /**
