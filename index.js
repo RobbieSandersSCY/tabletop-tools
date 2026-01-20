@@ -165,6 +165,17 @@ function canSee(light, vision) {
     return Boolean(false);
   }
 }
+// Code solution from Lester
+// if(light === `bright`) {
+//   return true;
+// } else if (light === `dim`) {
+//   return vision === `low-light` || vision === `dark`;
+// } else if (light === `dark`) {
+//   return vision === `dark`;
+// } else {
+//   return false;
+// }
+
 
 /**
  * A strike deals damage if it hits, unless the strike is a critical hit,
@@ -177,5 +188,11 @@ function canSee(light, vision) {
  * @returns {number} damage dealt by the strike
  */
 function getStrikeDamage(attack, ac, damage) {
-  // TODO
+  if (doesStrikeHit(attack, ac) === false) {
+    return 0;
+  } else if (doesStrikeCrit(attack, ac)) {
+    return 2 * damage;
+  } else {
+    return damage;
+  }
 }
