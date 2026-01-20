@@ -117,7 +117,11 @@ function getProficiencyBonus(level, rank) {
  * @returns {number} the cover bonus to AC
  */
 function getCoverBonus(behindObstacle, takingCover) {
-  // TODO
+  if (takingCover === true) {
+    return 4;
+  } else if (behindObstacle === true) {
+    return 2;
+  }
 }
 
 /**
